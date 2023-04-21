@@ -49,7 +49,7 @@ export default class App extends Component {
       );
 
       if (hits.length === 0) {
-        toast.error(`Ups...we haven\'t ${query} images...`);
+        toast.error(`Ups...we have not ${query} images...`);
         this.setState({ images: null, status: 'rejected' });
         return;
       }
