@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MdOutlineImageSearch } from 'react-icons/md';
 
 import { Header, Input, Button } from './SearchbarStyle';
 
@@ -10,7 +11,7 @@ export default class SearchForm extends Component {
   };
 
   handleQueryChange = event => {
-    this.setState({ inputQuery: event.currentTarget.value });
+    this.setState({ inputQuery: event.target.value });
   };
 
   handleSubmit = event => {
@@ -21,24 +22,29 @@ export default class SearchForm extends Component {
     }
 
     const { inputQuery } = this.state;
-    inputQuery.toLocaleLowerCase().trim();
+    inputQuery.toLowerCase().trim();
     this.props.onSubmit(inputQuery);
   };
 
   render() {
     const { inputQuery } = this.state;
-
     return (
       <Header>
-        <form onSubmit={this.handleSubmit}>
-          <Button type="submit">Search</Button>
+        <form
+          onSubmit={e => {
+            this.handleSubmit(e);
+          }}
+        >
+          <Button type="submit">
+            <MdOutlineImageSearch />
+          </Button>
           <Input
             type="text"
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
-            value={inputQuery}
             onChange={this.handleQueryChange}
+            value={inputQuery}
           />
         </form>
       </Header>

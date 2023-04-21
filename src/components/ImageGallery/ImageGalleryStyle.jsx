@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const GalleryList = styled.ul`
-  padding: 10px;
+  padding: 24px 10px;
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 10px;

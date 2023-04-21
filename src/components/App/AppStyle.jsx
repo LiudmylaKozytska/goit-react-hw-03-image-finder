@@ -1,3 +1,7 @@
 import styled from '@emotion/styled';
 
-export const Wallpaper = styled.div``;
+export const LoadingPage = styled.div`
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+`;

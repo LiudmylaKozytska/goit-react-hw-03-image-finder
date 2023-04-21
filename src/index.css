@@ -3,8 +3,9 @@
 body {
   margin: 0;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  background-image: url('./image/image.jpg');
+  background-image: url('./image/sorrow.jpg');
   background-size: cover;
+  background-repeat: repeat;
 
 
 
@@ -12,6 +13,9 @@ body {
 
 code {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+svg {
+  display: block;
 }
 
 ul {
