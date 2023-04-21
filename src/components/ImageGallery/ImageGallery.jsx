@@ -6,7 +6,7 @@ export const Gallery = ({ images, onImageClick }) => {
     <GalleryList>
       {images.map(({ id, webformatURL, tags, largeImageURL }) => (
         <li key={id} onClick={() => onImageClick(largeImageURL)}>
-          <GalleryImage src={webformatURL} alt={tags} />
+          <GalleryImage src={webformatURL} alt={id} />
         </li>
       ))}
     </GalleryList>
@@ -18,7 +18,6 @@ Gallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       webformatURL: PropTypes.string.isRequired,
-      tags: PropTypes.string.isRequired,
       largeImageURL: PropTypes.string.isRequired,
     })
   ).isRequired,
