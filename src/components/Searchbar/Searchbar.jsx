@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { MdOutlineImageSearch } from 'react-icons/md';
@@ -51,3 +52,7 @@ export default class SearchForm extends Component {
     );
   }
 }
+
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
